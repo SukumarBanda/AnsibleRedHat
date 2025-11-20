@@ -1,0 +1,20 @@
+---
+- name: Example playbook with 10-minute wait time
+  hosts: all
+  become: yes
+
+  tasks:
+  
+    - name: Perform initial action
+      debug:
+        msg: "Starting tasks..."
+    
+    - name: Wait for 10 minutes (600 seconds)
+      wait_for:
+        timeout: 600
+      delegate_to: localhost
+
+        
+        
+  
+  
