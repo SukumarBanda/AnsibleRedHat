@@ -1,6 +1,7 @@
 ---
 - name: Example playbook with 10-minute wait time
   hosts: all
+  gather_facts:no
   become: yes
 
   tasks:
